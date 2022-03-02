@@ -1,0 +1,93 @@
+.header {
+  position: relative;
+}
+.header__wrapper {
+  max-width: var(--content_width);
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__top {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.header__bottom {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: #fff;
+  background-color: #1a1728;
+  background-image: linear-gradient(to right, #1a1728, #5a526a, #1a1728);
+}
+.header__link {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  
+  &--pay {
+    margin-right: 20px;
+  }
+  &--shop {
+    margin-right: 20px;
+  }
+  &--contacts {
+    
+  }
+  &--login {
+    
+  }
+  &--reg {
+    margin-left: 20px;
+  }
+}
+.header__logo {
+  width: 60px;
+}
+.header__icon {
+  position: relative;
+  display: block;
+  width: 25px;
+  height: 25px;
+  margin-left: 15px;
+  text-decoration: none;
+  color: #fff;
+  
+  &--like {
+    background-image: url(../img/icons/like.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25px 25px;
+  }
+  &--cart {
+    
+  }
+}
+.header__num {
+  position: absolute;
+  top: -3px;
+  right: -10px;
+  width: 15px;
+  height: 15px;
+  display: block;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  color: #fff;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  background-color: #1a1728;
+  box-sizing: border-box;
+}
+.header__price {
+  margin: 15px;
+}
+.header__cart {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+}
