@@ -1,29 +1,33 @@
-.menu {
-  
-}
 .menu__wrap {
-  display: block;
+  display: none;
   position: absolute;
   top: 100%;
   left: 0;
   right: 0;
   z-index: 1000;
+  padding-top: 25px;
   color: #fff;
-  background-color: #2a3a4a;
+  background-color: #1a1728;
+  background-image: linear-gradient(to right, #1a1728, #5a526a, #1a1728);
 }
 .menu__btn {
-  padding-left: 25px;
+  padding-left: 45px;
   display: block;
-  height: 30px;
+  height: 45px;
   color: #fff;
   font-weight: 700;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 20px;
+  line-height: 45px;
   text-decoration: none;
   background-image: url(../img/icons/menu.svg);
   background-repeat: no-repeat;
-  background-size: 20px 20px;
+  background-size: 30px 30px;
   background-position: left center;
+  
+  &--open {
+    background-image: url(../img/icons/cross.svg);
+    background-size: 25px 25px;
+  }
 }
 .menu__sublist,
 .menu__list {
@@ -31,14 +35,45 @@
   list-style: none;
   box-sizing: border-box;
 }
+.menu__list {
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: var(--content_width);
+  margin: 0 auto;
+  width: 100%;
+}
 .menu__item {
   position: relative;
-  padding-left: 55px;
-  margin-bottom: 30px;
+  width: 30%;
+  padding-left: 70px;
+  padding-right: 20px;
+  margin-bottom: 28px;
+  box-sizing: border-box;
   
   a {
     color: #fff;
     text-decoration: none;
+  }
+  &:nth-child(7) {
+    .menu__icon {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  &:nth-child(9),
+  &:nth-child(11) {
+    .menu__icon {
+      left: 10px;
+      width: 35px;
+      height: 35px;
+    }
+  }
+  &:nth-child(11) {
+    .menu__icon {
+      top: -5px;
+    }
   }
 }
 .menu__icon {
@@ -46,9 +81,33 @@
   top: 0;
   left: 0;
   width: 45px;
+  height: 45px;
   padding: 0;
   margin: 0;
+  
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
 }
 .menu__subitem {
-  font-size: 12px;
+  font-size: 13px;
+  
+  a {
+    display: block;
+    margin-bottom: 5px;
+  }
+}
+.menu__link {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 700;
+  font-size: 17px;
+}
+.menu__link,
+.menu__subitem a {
+  &:hover,
+  &:active {
+    text-decoration: underline;
+  }
 }

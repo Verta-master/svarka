@@ -142,7 +142,7 @@
               </li>
               <li class="menu__item">
                 <figure class="menu__icon">
-                  <img src="img/icons/icon-10svg" alt="Каталог">
+                  <img src="img/icons/icon-10.svg" alt="Каталог">
                 </figure>
                 <a href="#" class="menu__link">Прочее оборудование</a>
                 <ul class="menu__sublist">
@@ -182,5 +182,13 @@
     </div>
   </header>
 
+  <script src="js/jquery-3.2.1.min.js"></script>
+  
+  <script>
+    $('.menu__btn').click(function() {
+      $(this).toggleClass('menu__btn--open');
+      $('.menu__wrap').slideToggle();
+    })
+  </script>
 </body>
 </html>
