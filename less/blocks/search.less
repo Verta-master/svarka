@@ -5,18 +5,21 @@
   display: flex;
   width: 100%;
 }
+.search__open,
 .search__btn {
   display: block;
+  border: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  outline: none;
+}
+.search__btn {
   width: 50px;
   height: 45px;
   border-radius: 3px 0 0 3px;
-  border: 0;
   background-color: #fff;
   background-image: url(../img/icons/search.svg);
-  background-repeat: no-repeat;
-  background-position: center;
   background-size: 20px 20px;
-  outline: none;
 }
 .search__input {
   display: block;
@@ -27,4 +30,12 @@
   box-sizing: border-box;
   font-size: 12px;
   outline: none;
+}
+.search__open {
+  display: none;
+  width: 30px;
+  height: 30px;
+  background-image: url(../img/icons/search-white.svg);
+  background-size: 30px 30px;
+  background-color: rgba(255,255,255,0);
 }

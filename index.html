@@ -27,6 +27,7 @@
     </div>
     <div class="header__bottom">
       <div class="header__wrapper">
+        <a href="#menu" class="header__menu"></a>
         <div class="header__logo">
           <img src="img/images/logo.svg" alt="Logo">
         </div>
@@ -164,10 +165,13 @@
           </div>
         </nav>
         <div class="search">
-          <form action="#" class="search__form">
-            <button type="submit" class="search__btn"></button>
-            <input type="text" class="search__input" placeholder="Поиск">
-          </form>
+          <button type="button" class="search__open"></button>
+          <div class="search__wrap">
+            <form action="#" class="search__form">
+              <button type="submit" class="search__btn"></button>
+              <input type="text" class="search__input" placeholder="Поиск">
+            </form>
+          </div>
         </div>
         <a href="#" class="header__icon header__icon--like" titlee="Избранное">
           <span class="header__num">0</span>
@@ -188,6 +192,11 @@
     $('.menu__btn').click(function() {
       $(this).toggleClass('menu__btn--open');
       $('.menu__wrap').slideToggle();
+    })
+    
+    $('.search__open').click(function() {
+      $(this).toggleClass('search__open--close');
+      $('.search__wrap').slideToggle();
     })
   </script>
 </body>
